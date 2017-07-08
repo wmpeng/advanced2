@@ -12,7 +12,7 @@ $this->title = '个人作业';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-contact">
-    <h1>顾飞(1511172)</h1>
+    <h1>王占川(1511216)</h1>
 
     <p>
         所属成员：DBIS,NKU

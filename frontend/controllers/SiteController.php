@@ -86,7 +86,8 @@ class SiteController extends Controller
         echo 'hello';
         \Yii::Warning('Hello, I am a test log message');
         \YII::endProfile('profile0');
-        return $this->render('index');
+        //return $this->render('index');
+        return $this->render('teamwork');
     }
 
     /**
@@ -165,12 +166,26 @@ class SiteController extends Controller
         return $this->render('teamwork');
     }
 
+    /** 
+     * Displays teamShow page.
+     */
+    public function actionTeamshow()
+    {
+        return $this->render('teamshow');
+    }
+
+
      /** 
      * Displays personal page.
      */
     public function actionPersonalwork1()
     {
         return $this->render('personalwork1');
+    }
+
+    public function actionPersonalwork2()
+    {
+        return $this->render('personalwork2');
     }
 
 
