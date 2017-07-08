@@ -355,7 +355,7 @@ AppAsset::register($this);
               </li>
               <li>
                 <a href="<?php echo Url::to(['site/personalwork2']) ?>">
-                  <span class="glyphicon glyphicon-book"></span> 王占</a>
+                  <span class="glyphicon glyphicon-book"></span> 王占川</a>
               </li>
             </ul>
           </li>
