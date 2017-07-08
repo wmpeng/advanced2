@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1>王占川(1511216)</h1>
 
     <p>
-        所属成员：DBIS,NKU
+        团队名称：WWWG
     </p>
     <br/>
     <div class="row">

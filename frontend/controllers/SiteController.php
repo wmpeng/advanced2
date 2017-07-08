@@ -87,7 +87,7 @@ class SiteController extends Controller
         \Yii::Warning('Hello, I am a test log message');
         \YII::endProfile('profile0');
         //return $this->render('index');
-        return $this->render('teamwork');
+        return $this->render('teamshow');
     }
 
     /**
