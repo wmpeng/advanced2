@@ -20,7 +20,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <br/>
     <div class="row">
         <div class="col-lg-5">
-            <h4><a href="../../files/new.pdf" target="_blanket">需求文档</a></h4>
+            <h4><a href="../../files/test.html" target="_blanket">需求文档</a></h4>
             <h4><a href="#">设计文档</a></h4>
             <h4><a href="#">实现文档</a></h4>
             <h4><a href="#">用户手册</a></h4>

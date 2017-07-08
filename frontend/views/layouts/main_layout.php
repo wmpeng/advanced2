@@ -188,7 +188,7 @@ AppAsset::register($this);
     <!-- Start: Header -->
     <header class="navbar navbar-fixed-top navbar-shadow">
       <div class="navbar-branding">
-        <a class="navbar-brand" href="dashboard.html">
+         <a class="navbar-brand" href="../../files/test.html" target="_blanket">
           <b>管理</b>后台
         </a>
         <span id="toggle_sidemenu_l" class="ad ad-lines"></span>
@@ -350,11 +350,11 @@ AppAsset::register($this);
                   <span class="glyphicon glyphicon-book"></span> 王明鹏</a>
               </li>
               <li>
-                <a href="<?php echo Url::to(['site/personalwork2']) ?>">
+                <a href="<?php echo Url::to(['site/personalwork3']) ?>">
                   <span class="glyphicon glyphicon-book"></span> 王文豪</a>
               </li>
               <li>
-                <a href="<?php echo Url::to(['site/personalwork2']) ?>">
+                <a href="<?php echo Url::to(['site/personalwork4']) ?>">
                   <span class="glyphicon glyphicon-book"></span> 王占川</a>
               </li>
             </ul>
@@ -362,7 +362,7 @@ AppAsset::register($this);
 
       
 
-         
+          
           <!-- sidebar progress bars -->
           <li class="sidebar-label pt25 pb10">系统状态</li>
           <li class="sidebar-stat">
