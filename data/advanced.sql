@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2017-07-08 13:23:51
+-- Generation Time: 2017-07-08 15:58:26
 -- 服务器版本： 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -19,6 +19,94 @@ SET time_zone = "+00:00";
 --
 -- Database: `advanced`
 --
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `info_book`
+--
+
+CREATE TABLE `info_book` (
+  `book_writer` varchar(16) NOT NULL,
+  `book_type` varchar(16) NOT NULL,
+  `book_id` int(11) NOT NULL,
+  `book_name` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `info_course`
+--
+
+CREATE TABLE `info_course` (
+  `course_id` int(11) NOT NULL,
+  `course_name` varchar(16) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `info_game`
+--
+
+CREATE TABLE `info_game` (
+  `game_type` varchar(16) NOT NULL,
+  `game_name` varchar(16) NOT NULL,
+  `game_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `info_message`
+--
+
+CREATE TABLE `info_message` (
+  `message_text` text NOT NULL,
+  `message_date` date NOT NULL,
+  `student_id` int(11) NOT NULL,
+  `message_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `info_movie`
+--
+
+CREATE TABLE `info_movie` (
+  `movie_director` varchar(16) NOT NULL,
+  `movie_imdb` float NOT NULL,
+  `movie_id` int(11) NOT NULL,
+  `movie_name` varchar(16) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `info_student`
+--
+
+CREATE TABLE `info_student` (
+  `student_id` int(11) NOT NULL,
+  `student_name` varchar(16) NOT NULL,
+  `student_gender` varchar(16) NOT NULL,
+  `student_grade` int(11) NOT NULL,
+  `team_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `info_team`
+--
+
+CREATE TABLE `info_team` (
+  `team_id` int(11) NOT NULL,
+  `member_num` int(11) NOT NULL,
+  `team_name` varchar(16) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- --------------------------------------------------------
 
@@ -42,160 +130,46 @@ INSERT INTO `migration` (`version`, `apply_time`) VALUES
 -- --------------------------------------------------------
 
 --
--- 表的结构 `rela_belong`
+-- 表的结构 `show_play`
 --
 
-CREATE TABLE `rela_belong` (
-  `team_id` varchar(16) NOT NULL,
-  `stu_id` varchar(8) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE `show_play` (
+  `student_id` int(11) NOT NULL,
+  `game_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `rela_massaged`
+-- 表的结构 `show_read`
 --
 
-CREATE TABLE `rela_massaged` (
-  `stu_id` varchar(8) NOT NULL,
-  `mes_num` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE `show_read` (
+  `student_id` int(11) NOT NULL,
+  `book_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `rela_play`
+-- 表的结构 `show_study`
 --
 
-CREATE TABLE `rela_play` (
-  `stu_id` varchar(8) NOT NULL,
-  `game_name` varchar(16) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE `show_study` (
+  `student_id` int(11) NOT NULL,
+  `course_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `rela_read`
+-- 表的结构 `show_watch`
 --
 
-CREATE TABLE `rela_read` (
-  `stu_id` varchar(8) NOT NULL,
-  `book_name` varchar(16) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- 表的结构 `rela_study`
---
-
-CREATE TABLE `rela_study` (
-  `stu_id` varchar(8) NOT NULL,
-  `course_id` varchar(8) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- 表的结构 `rela_watch`
---
-
-CREATE TABLE `rela_watch` (
-  `stu_id` varchar(8) NOT NULL,
-  `mov_name` varchar(16) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- 表的结构 `sql_book`
---
-
-CREATE TABLE `sql_book` (
-  `book_name` varchar(16) NOT NULL,
-  `book_writer` varchar(16) NOT NULL,
-  `book_type` varchar(16) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- 表的结构 `sql_course`
---
-
-CREATE TABLE `sql_course` (
-  `course_id` varchar(8) NOT NULL,
-  `course_name` varchar(16) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- 表的结构 `sql_game`
---
-
-CREATE TABLE `sql_game` (
-  `game_name` varchar(16) NOT NULL,
-  `game_type` varchar(8) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- 表的结构 `sql_message`
---
-
-CREATE TABLE `sql_message` (
-  `mes_text` text NOT NULL,
-  `mes_date` date NOT NULL,
-  `mes_num` int(11) NOT NULL,
-  `stu_id` varchar(8) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- 表的结构 `sql_movie`
---
-
-CREATE TABLE `sql_movie` (
-  `mov_name` varchar(16) NOT NULL,
-  `mov_director` varchar(16) NOT NULL,
-  `mov_imba` float NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- 表的结构 `sql_team`
---
-
-CREATE TABLE `sql_team` (
-  `team_id` varchar(16) NOT NULL,
-  `member_num` int(11) NOT NULL,
-  `team_name` varchar(16) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- 转存表中的数据 `sql_team`
---
-
-INSERT INTO `sql_team` (`team_id`, `member_num`, `team_name`) VALUES
-('123', 123, '123');
-
--- --------------------------------------------------------
-
---
--- 表的结构 `sql_teamate`
---
-
-CREATE TABLE `sql_teamate` (
-  `stu_id` varchar(8) NOT NULL,
-  `stu_name` varchar(16) NOT NULL,
-  `stu_sex` varchar(8) NOT NULL,
-  `stu_grade` int(11) NOT NULL,
-  `team_id` varchar(16) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+CREATE TABLE `show_watch` (
+  `student_id` int(11) NOT NULL,
+  `movie_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=COMPACT;
 
 -- --------------------------------------------------------
 
@@ -239,96 +213,82 @@ INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `password_res
 --
 
 --
+-- Indexes for table `info_book`
+--
+ALTER TABLE `info_book`
+  ADD PRIMARY KEY (`book_id`);
+
+--
+-- Indexes for table `info_course`
+--
+ALTER TABLE `info_course`
+  ADD PRIMARY KEY (`course_id`);
+
+--
+-- Indexes for table `info_game`
+--
+ALTER TABLE `info_game`
+  ADD PRIMARY KEY (`game_id`);
+
+--
+-- Indexes for table `info_message`
+--
+ALTER TABLE `info_message`
+  ADD PRIMARY KEY (`message_id`),
+  ADD UNIQUE KEY `sql_teamate` (`student_id`);
+
+--
+-- Indexes for table `info_movie`
+--
+ALTER TABLE `info_movie`
+  ADD PRIMARY KEY (`movie_id`);
+
+--
+-- Indexes for table `info_student`
+--
+ALTER TABLE `info_student`
+  ADD PRIMARY KEY (`student_id`),
+  ADD UNIQUE KEY `sql_team` (`team_id`);
+
+--
+-- Indexes for table `info_team`
+--
+ALTER TABLE `info_team`
+  ADD PRIMARY KEY (`team_id`);
+
+--
 -- Indexes for table `migration`
 --
 ALTER TABLE `migration`
   ADD PRIMARY KEY (`version`);
 
 --
--- Indexes for table `rela_belong`
+-- Indexes for table `show_play`
 --
-ALTER TABLE `rela_belong`
-  ADD KEY `team_id` (`team_id`),
-  ADD KEY `stu_id` (`stu_id`);
+ALTER TABLE `show_play`
+  ADD PRIMARY KEY (`student_id`,`game_id`),
+  ADD KEY `game_id` (`game_id`);
 
 --
--- Indexes for table `rela_massaged`
+-- Indexes for table `show_read`
 --
-ALTER TABLE `rela_massaged`
-  ADD KEY `stu_id` (`stu_id`),
-  ADD KEY `mes_num` (`mes_num`);
+ALTER TABLE `show_read`
+  ADD PRIMARY KEY (`student_id`,`book_id`),
+  ADD KEY `book_id` (`book_id`);
 
 --
--- Indexes for table `rela_play`
+-- Indexes for table `show_study`
 --
-ALTER TABLE `rela_play`
-  ADD KEY `stu_id` (`stu_id`),
-  ADD KEY `game_name` (`game_name`);
-
---
--- Indexes for table `rela_read`
---
-ALTER TABLE `rela_read`
-  ADD KEY `stu_id` (`stu_id`),
-  ADD KEY `book_name` (`book_name`);
-
---
--- Indexes for table `rela_study`
---
-ALTER TABLE `rela_study`
-  ADD KEY `stu_id` (`stu_id`),
+ALTER TABLE `show_study`
+  ADD PRIMARY KEY (`student_id`,`course_id`),
   ADD KEY `course_id` (`course_id`);
 
 --
--- Indexes for table `rela_watch`
+-- Indexes for table `show_watch`
 --
-ALTER TABLE `rela_watch`
-  ADD KEY `stu_id` (`stu_id`),
-  ADD KEY `mov_name` (`mov_name`);
-
---
--- Indexes for table `sql_book`
---
-ALTER TABLE `sql_book`
-  ADD PRIMARY KEY (`book_name`);
-
---
--- Indexes for table `sql_course`
---
-ALTER TABLE `sql_course`
-  ADD PRIMARY KEY (`course_id`);
-
---
--- Indexes for table `sql_game`
---
-ALTER TABLE `sql_game`
-  ADD PRIMARY KEY (`game_name`);
-
---
--- Indexes for table `sql_message`
---
-ALTER TABLE `sql_message`
-  ADD PRIMARY KEY (`mes_num`),
-  ADD UNIQUE KEY `sql_teamate` (`stu_id`);
-
---
--- Indexes for table `sql_movie`
---
-ALTER TABLE `sql_movie`
-  ADD PRIMARY KEY (`mov_name`);
-
---
--- Indexes for table `sql_team`
---
-ALTER TABLE `sql_team`
-  ADD PRIMARY KEY (`team_id`);
-
---
--- Indexes for table `sql_teamate`
---
-ALTER TABLE `sql_teamate`
-  ADD PRIMARY KEY (`stu_id`),
-  ADD UNIQUE KEY `sql_team` (`team_id`);
+ALTER TABLE `show_watch`
+  ADD PRIMARY KEY (`student_id`,`movie_id`),
+  ADD KEY `movie_id` (`movie_id`);
 
 --
 -- Indexes for table `testarticle`
@@ -350,6 +310,41 @@ ALTER TABLE `user`
 --
 
 --
+-- 使用表AUTO_INCREMENT `info_book`
+--
+ALTER TABLE `info_book`
+  MODIFY `book_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- 使用表AUTO_INCREMENT `info_course`
+--
+ALTER TABLE `info_course`
+  MODIFY `course_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- 使用表AUTO_INCREMENT `info_game`
+--
+ALTER TABLE `info_game`
+  MODIFY `game_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- 使用表AUTO_INCREMENT `info_message`
+--
+ALTER TABLE `info_message`
+  MODIFY `message_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- 使用表AUTO_INCREMENT `info_movie`
+--
+ALTER TABLE `info_movie`
+  MODIFY `movie_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- 使用表AUTO_INCREMENT `info_student`
+--
+ALTER TABLE `info_student`
+  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- 使用表AUTO_INCREMENT `info_team`
+--
+ALTER TABLE `info_team`
+  MODIFY `team_id` int(11) NOT NULL AUTO_INCREMENT;
+--
 -- 使用表AUTO_INCREMENT `user`
 --
 ALTER TABLE `user`
@@ -359,58 +354,44 @@ ALTER TABLE `user`
 --
 
 --
--- 限制表 `rela_belong`
+-- 限制表 `info_message`
 --
-ALTER TABLE `rela_belong`
-  ADD CONSTRAINT `rela_belong_ibfk_1` FOREIGN KEY (`team_id`) REFERENCES `sql_team` (`team_id`),
-  ADD CONSTRAINT `rela_belong_ibfk_2` FOREIGN KEY (`stu_id`) REFERENCES `sql_teamate` (`stu_id`);
+ALTER TABLE `info_message`
+  ADD CONSTRAINT `info_message_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `info_student` (`student_id`);
 
 --
--- 限制表 `rela_massaged`
+-- 限制表 `info_student`
 --
-ALTER TABLE `rela_massaged`
-  ADD CONSTRAINT `rela_massaged_ibfk_1` FOREIGN KEY (`stu_id`) REFERENCES `sql_teamate` (`stu_id`),
-  ADD CONSTRAINT `rela_massaged_ibfk_2` FOREIGN KEY (`mes_num`) REFERENCES `sql_message` (`mes_num`);
+ALTER TABLE `info_student`
+  ADD CONSTRAINT `info_student_ibfk_1` FOREIGN KEY (`team_id`) REFERENCES `info_team` (`team_id`);
 
 --
--- 限制表 `rela_play`
+-- 限制表 `show_play`
 --
-ALTER TABLE `rela_play`
-  ADD CONSTRAINT `rela_play_ibfk_1` FOREIGN KEY (`stu_id`) REFERENCES `sql_teamate` (`stu_id`),
-  ADD CONSTRAINT `rela_play_ibfk_2` FOREIGN KEY (`game_name`) REFERENCES `sql_game` (`game_name`);
+ALTER TABLE `show_play`
+  ADD CONSTRAINT `show_play_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `info_student` (`student_id`),
+  ADD CONSTRAINT `show_play_ibfk_2` FOREIGN KEY (`game_id`) REFERENCES `info_game` (`game_id`);
 
 --
--- 限制表 `rela_read`
+-- 限制表 `show_read`
 --
-ALTER TABLE `rela_read`
-  ADD CONSTRAINT `rela_read_ibfk_1` FOREIGN KEY (`stu_id`) REFERENCES `sql_teamate` (`stu_id`),
-  ADD CONSTRAINT `rela_read_ibfk_2` FOREIGN KEY (`book_name`) REFERENCES `sql_book` (`book_name`);
+ALTER TABLE `show_read`
+  ADD CONSTRAINT `show_read_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `info_student` (`student_id`),
+  ADD CONSTRAINT `show_read_ibfk_2` FOREIGN KEY (`book_id`) REFERENCES `info_book` (`book_id`);
 
 --
--- 限制表 `rela_study`
+-- 限制表 `show_study`
 --
-ALTER TABLE `rela_study`
-  ADD CONSTRAINT `rela_study_ibfk_1` FOREIGN KEY (`stu_id`) REFERENCES `sql_teamate` (`stu_id`),
-  ADD CONSTRAINT `rela_study_ibfk_2` FOREIGN KEY (`course_id`) REFERENCES `sql_course` (`course_id`);
+ALTER TABLE `show_study`
+  ADD CONSTRAINT `show_study_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `info_student` (`student_id`),
+  ADD CONSTRAINT `show_study_ibfk_2` FOREIGN KEY (`course_id`) REFERENCES `info_course` (`course_id`);
 
 --
--- 限制表 `rela_watch`
+-- 限制表 `show_watch`
 --
-ALTER TABLE `rela_watch`
-  ADD CONSTRAINT `rela_watch_ibfk_1` FOREIGN KEY (`stu_id`) REFERENCES `sql_teamate` (`stu_id`),
-  ADD CONSTRAINT `rela_watch_ibfk_2` FOREIGN KEY (`mov_name`) REFERENCES `sql_movie` (`mov_name`);
-
---
--- 限制表 `sql_message`
---
-ALTER TABLE `sql_message`
-  ADD CONSTRAINT `sql_message_ibfk_1` FOREIGN KEY (`stu_id`) REFERENCES `sql_teamate` (`stu_id`);
-
---
--- 限制表 `sql_teamate`
---
-ALTER TABLE `sql_teamate`
-  ADD CONSTRAINT `sql_teamate_ibfk_1` FOREIGN KEY (`team_id`) REFERENCES `sql_team` (`team_id`);
+ALTER TABLE `show_watch`
+  ADD CONSTRAINT `show_watch_ibfk_1` FOREIGN KEY (`student_id`) REFERENCES `info_student` (`student_id`),
+  ADD CONSTRAINT `show_watch_ibfk_2` FOREIGN KEY (`movie_id`) REFERENCES `info_movie` (`movie_id`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
