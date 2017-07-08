@@ -302,7 +302,23 @@ AppAsset::register($this);
 
         <!-- Start: Sidebar Menu -->
         <ul class="nav sidebar-menu">
-         
+
+          <li class="sidebar-label pt15">团队展示</li>
+          <li>
+            <a class="accordion-toggle">
+              <span class="glyphicon glyphicon-fire"></span>
+              <span class="sidebar-title">团队展示</span>
+              <span class="caret"></span>
+            </a>
+            <ul class="nav sub-nav">
+              <li>
+                <a href="<?php echo Url::to(['site/teamshow']) ?>">
+                  <span class="glyphicon glyphicon-book"></span> 团队展示</a>
+              </li>
+
+            </ul>
+          </li>
+
           <li class="sidebar-label pt15">作业展示</li>
           <li>
             <a class="accordion-toggle" >
@@ -327,11 +343,19 @@ AppAsset::register($this);
             <ul class="nav sub-nav">
               <li>
                 <a href="<?php echo Url::to(['site/personalwork1']) ?>">
-                  <span class="glyphicon glyphicon-book"></span> 乜鹏</a>
+                  <span class="glyphicon glyphicon-book"></span> 顾飞</a>
               </li>
               <li>
                 <a href="<?php echo Url::to(['site/personalwork2']) ?>">
-                  <span class="glyphicon glyphicon-book"></span> xx</a>
+                  <span class="glyphicon glyphicon-book"></span> 王明鹏</a>
+              </li>
+              <li>
+                <a href="<?php echo Url::to(['site/personalwork2']) ?>">
+                  <span class="glyphicon glyphicon-book"></span> 王文豪</a>
+              </li>
+              <li>
+                <a href="<?php echo Url::to(['site/personalwork2']) ?>">
+                  <span class="glyphicon glyphicon-book"></span> 王占</a>
               </li>
             </ul>
           </li>

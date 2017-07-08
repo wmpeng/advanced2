@@ -12,15 +12,15 @@ $this->title = '团队作业';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-contact">
-    <h1>团队：DBIS, NKU</h1>
+    <h1>团队：WWWG</h1>
 
     <p>
-        团队成员：乜鹏(0912635)
+        团队成员：顾飞(1511171) 王明鹏（1511212）王文豪（1511214）王占川（1511216）
     </p>
     <br/>
     <div class="row">
         <div class="col-lg-5">
-            <h4><a href="#">需求文档</a></h4>
+            <h4><a href="../../files/new.pdf" target="_blanket">需求文档</a></h4>
             <h4><a href="#">设计文档</a></h4>
             <h4><a href="#">实现文档</a></h4>
             <h4><a href="#">用户手册</a></h4>
