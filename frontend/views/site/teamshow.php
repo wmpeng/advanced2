@@ -24,10 +24,13 @@
 			<div class="container">
 				<div class="row"  table-layout: fixed>
 					<div class="col-md-4 fh5co-staff" >
-						<img src="images/person3.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
-						<h3>Athan Smith</h3>
-						<h4>Co-Founder, CEO</h4>
-						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+						<img src="../../files/图片/wmp.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
+						<h3>王明鹏</h3>
+						<h4>学号：</h4>
+						<p>性别：
+						<br/>年级：
+						<br/>队伍：</p>
+						<a href="../../files/personshow/wmp/index.html" target="_blanket"">个人主页<a>
 						<ul class="fh5co-social">
 							<li><a href="#"><i class="icon-google"></i></a></li>
 							<li><a href="#"><i class="icon-dribbble"></i></a></li>
@@ -37,10 +40,13 @@
 						</ul>
 					</div>
 					<div class="col-md-4 fh5co-staff">
-						<img src="images/person2.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
-						<h3>Nathalie Kosley</h3>
-						<h4>Co-Founder, CTO</h4>
-						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+						<img src="../../files/图片/wwh.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
+						<h3>王文豪</h3>
+						<h4>学号：</h4>
+						<p>性别：
+						<br/>年级：
+						<br/>队伍：</p>
+						<a href="../../files/personshow/wwh/index.html" target="_blanket">个人主页<a>
 						<ul class="fh5co-social">
 							<li><a href="#"><i class="icon-google"></i></a></li>
 							<li><a href="#"><i class="icon-dribbble"></i></a></li>
@@ -50,10 +56,13 @@
 						</ul>
 					</div>
 					<div class="col-md-4 fh5co-staff">
-						<img src="images/person3.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
-						<h3>Athan Smith</h3>
-						<h4>Co-Founder, CEO</h4>
-						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+						<img src="../../files/图片/wzc.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
+						<h3>王占川</h3>
+						<h4>学号：</h4>
+						<p>性别：
+						<br/>年级：
+						<br/>队伍：</p>
+						<a href="../../files/personshow/wzc/index.html" target="_blanket"">个人主页<a>
 						<ul class="fh5co-social">
 							<li><a href="#"><i class="icon-google"></i></a></li>
 							<li><a href="#"><i class="icon-dribbble"></i></a></li>
@@ -63,10 +72,13 @@
 						</ul>
 					</div>
 					<div class="col-md-4 fh5co-staff">
-						<img src="images/person2.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
-						<h3>Nathalie Kosley</h3>
-						<h4>Co-Founder, CTO</h4>
-						<p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+						<img src="../../files/图片/gf.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
+						<h3>顾飞</h3>
+						<h4>学号：</h4>
+						<p>性别：
+						<br/>年级：
+						<br/>队伍：</p>
+						<a href="../../files/personshow/gf/index.html" target="_blanket"">个人主页<a>
 						<ul class="fh5co-social">
 							<li><a href="#"><i class="icon-google"></i></a></li>
 							<li><a href="#"><i class="icon-dribbble"></i></a></li>
