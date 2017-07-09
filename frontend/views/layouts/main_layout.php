@@ -188,7 +188,7 @@ AppAsset::register($this);
     <!-- Start: Header -->
     <header class="navbar navbar-fixed-top navbar-shadow">
       <div class="navbar-branding">
-         <a class="navbar-brand" href="../../files/test.html" target="_blanket">
+         <a class="navbar-brand" href="../../backend/web/index.php" target="_blanket">
           <b>管理</b>后台
         </a>
         <span id="toggle_sidemenu_l" class="ad ad-lines"></span>
