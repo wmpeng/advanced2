@@ -78,7 +78,7 @@
 						<p>性别：
 						<br/>年级：
 						<br/>队伍：</p>
-						<a href="../../files/personshow/gf/index/index.html" target="_blanket"">个人主页<a>
+						<a href="../../files/personshow/gf/index.html" target="_blanket"">个人主页<a>
 						<ul class="fh5co-social">
 							<li><a href="#"><i class="icon-google"></i></a></li>
 							<li><a href="#"><i class="icon-twitter"></i></a></li>
