@@ -1,10 +1,3 @@
-<?php
-
-
-use yii\helpers\Html;
-use yii\bootstrap\ActiveForm;
-$this->title = 'teamshow';
-?>
 <head>
 	<!-- Animate.css -->
 	<link rel="stylesheet" href="css/animate.css">
@@ -35,8 +28,7 @@ $this->title = 'teamshow';
 						<h3>王明鹏</h3>
 						<h4>学号：</h4>
 						<p>性别：
-			
-			<br/>年级：
+						<br/>年级：
 						<br/>队伍：</p>
 						<a href="../../files/personshow/wmp/index.html" target="_blanket"">个人主页<a>
 						<ul class="fh5co-social">

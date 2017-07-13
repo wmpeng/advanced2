@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2017-07-11 09:43:37
+-- Generation Time: 2017-07-13 10:53:46
 -- 服务器版本： 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -44,8 +44,8 @@ CREATE TABLE `cont_contact` (
 CREATE TABLE `info_student` (
   `stuId` int(11) NOT NULL,
   `stuName` tinytext COLLATE utf8_bin NOT NULL,
-  `stuGender` tinyint(4) DEFAULT NULL,
-  `stuGrade` tinyint(4) DEFAULT NULL,
+  `stuGender` tinytext COLLATE utf8_bin,
+  `stuGrade` tinytext COLLATE utf8_bin,
   `teamId` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
@@ -59,6 +59,17 @@ CREATE TABLE `info_team` (
   `teamId` int(11) NOT NULL,
   `teamName` tinytext COLLATE utf8_bin NOT NULL,
   `memberNum` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `migration`
+--
+
+CREATE TABLE `migration` (
+  `version` varchar(180) COLLATE utf8_bin NOT NULL,
+  `apply_time` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
 -- --------------------------------------------------------
@@ -168,6 +179,24 @@ CREATE TABLE `show_team` (
   `slogan` text COLLATE utf8_bin
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `auth_key` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
+  `password_hash` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `password_reset_token` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `status` smallint(6) NOT NULL DEFAULT '10',
+  `created_at` int(11) NOT NULL,
+  `updated_at` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
 --
 -- Indexes for dumped tables
 --
@@ -190,6 +219,12 @@ ALTER TABLE `info_student`
 --
 ALTER TABLE `info_team`
   ADD PRIMARY KEY (`teamId`);
+
+--
+-- Indexes for table `migration`
+--
+ALTER TABLE `migration`
+  ADD PRIMARY KEY (`version`);
 
 --
 -- Indexes for table `msg_message`
@@ -249,6 +284,15 @@ ALTER TABLE `show_team`
   ADD PRIMARY KEY (`teamId`);
 
 --
+-- Indexes for table `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `username` (`username`),
+  ADD UNIQUE KEY `email` (`email`),
+  ADD UNIQUE KEY `password_reset_token` (`password_reset_token`);
+
+--
 -- 在导出的表使用AUTO_INCREMENT
 --
 
@@ -261,12 +305,12 @@ ALTER TABLE `cont_contact`
 -- 使用表AUTO_INCREMENT `info_student`
 --
 ALTER TABLE `info_student`
-  MODIFY `stuId` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `stuId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- 使用表AUTO_INCREMENT `info_team`
 --
 ALTER TABLE `info_team`
-  MODIFY `teamId` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `teamId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 --
 -- 使用表AUTO_INCREMENT `msg_message`
 --
@@ -276,17 +320,22 @@ ALTER TABLE `msg_message`
 -- 使用表AUTO_INCREMENT `show_book`
 --
 ALTER TABLE `show_book`
-  MODIFY `bookId` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `bookId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- 使用表AUTO_INCREMENT `show_game`
 --
 ALTER TABLE `show_game`
-  MODIFY `gameId` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `gameId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- 使用表AUTO_INCREMENT `show_movie`
 --
 ALTER TABLE `show_movie`
-  MODIFY `movieId` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `movieId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+--
+-- 使用表AUTO_INCREMENT `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- 限制导出的表
 --
