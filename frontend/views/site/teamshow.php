@@ -32,13 +32,19 @@ $this->title = 'teamshow';
 				<div class="row"  table-layout: fixed>
 					<div class="col-md-4 fh5co-staff" >
 						<img src="../../files/图片/wmp.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
-						<h3>王明鹏</h3>
-						<h4>学号：</h4>
-						<p>性别：
+						<h3><?=$msgList[1]['stuName']?></h3>
+						<h4>学号：<?=$msgList[1]['stuId']?></h4>
+						<p>性别：<?=$msgList[1]['stuGender']?>
 			
+<<<<<<< HEAD
 			<br/>年级：
 						<br/>队伍：</p>
 						<a href="index.php?r=site/wmpindex" target="_blanket"">个人主页<a>
+=======
+			<br/>年级：<?=$msgList[1]['stuGrade']?>
+						<br/>队伍：<?=$msgList[1]['teamName']?></p>
+						<a href="../../files/personshow/wmp/index.html" target="_blanket"">个人主页<a>
+>>>>>>> origin/master
 						<ul class="fh5co-social">
 							<li><a href="#"><i class="icon-google"></i></a></li>
 							<li><a href="#"><i class="icon-dribbble"></i></a></li>
@@ -49,12 +55,21 @@ $this->title = 'teamshow';
 					</div>
 					<div class="col-md-4 fh5co-staff">
 						<img src="../../files/图片/wwh.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
+<<<<<<< HEAD
 						<h3>王文豪</h3>
 						<h4>学号：</h4>
 						<p>性别：
 						<br/>年级：
 						<br/>队伍：</p>
 						<a href="index.php?r=site/wwhindex" target="_blanket">个人主页<a>
+=======
+						<h3><?=$msgList[2]['stuName']?></h3>
+						<h4>学号：<?=$msgList[2]['stuId']?></h4>
+						<p>性别：<?=$msgList[2]['stuGender']?>
+						<br/>年级：<?=$msgList[2]['stuGrade']?>
+						<br/>队伍：<?=$msgList[2]['teamName']?></p>
+						<a href="../../files/personshow/wwh/index.html" target="_blanket">个人主页<a>
+>>>>>>> origin/master
 						<ul class="fh5co-social">
 							<li><a href="#"><i class="icon-google"></i></a></li>
 							<li><a href="#"><i class="icon-dribbble"></i></a></li>
@@ -65,12 +80,21 @@ $this->title = 'teamshow';
 					</div>
 					<div class="col-md-4 fh5co-staff">
 						<img src="../../files/图片/wzc.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
+<<<<<<< HEAD
 						<h3>王占川</h3>
 						<h4>学号：</h4>
 						<p>性别：
 						<br/>年级：
 						<br/>队伍：</p>
 						<a href="index.php?r=site/wzcindex" target="_blanket"">个人主页<a>
+=======
+						<h3><?=$msgList[3]['stuName']?></h3>
+						<h4>学号：<?=$msgList[3]['stuId']?></h4>
+						<p>性别：<?=$msgList[3]['stuGender']?>
+						<br/>年级：<?=$msgList[3]['stuGrade']?>
+						<br/>队伍：<?=$msgList[3]['teamName']?></p>
+						<a href="../../files/personshow/wzc/index.html" target="_blanket"">个人主页<a>
+>>>>>>> origin/master
 						<ul class="fh5co-social">
 							<li><a href="#"><i class="icon-google"></i></a></li>
 							<li><a href="#"><i class="icon-dribbble"></i></a></li>
@@ -81,12 +105,21 @@ $this->title = 'teamshow';
 					</div>
 					<div class="col-md-4 fh5co-staff">
 						<img src="../../files/图片/gf.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
+<<<<<<< HEAD
 						<h3>顾飞</h3>
 						<h4>学号：</h4>
 						<p>性别：
 						<br/>年级：
 						<br/>队伍：</p>
 						<a href="index.php?r=site/gfindex" target="_blanket"">个人主页<a>
+=======
+						<h3><?=$msgList[0]['stuName']?></h3>
+						<h4>学号：<?=$msgList[0]['stuId']?></h4>
+						<p>性别：<?=$msgList[0]['stuGender']?>
+						<br/>年级：<?=$msgList[0]['stuGrade']?>
+						<br/>队伍：<?=$msgList[0]['teamName']?></p>
+						<a href="../../files/personshow/gf/index.html" target="_blanket"">个人主页<a>
+>>>>>>> origin/master
 						<ul class="fh5co-social">
 							<li><a href="#"><i class="icon-google"></i></a></li>
 							<li><a href="#"><i class="icon-twitter"></i></a></li>

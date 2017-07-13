@@ -24,7 +24,7 @@
 			<div class="container">
 				<div class="row"  table-layout: fixed>
 					<div class="col-md-4 fh5co-staff" >
-						<img src="../../files/图片/wmp.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
+						<img src="../../files/图片/wzc.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
 						<h3>王明鹏</h3>
 						<h4>学号：</h4>
 						<p>性别：
@@ -58,7 +58,7 @@
 					<div class="col-md-4 fh5co-staff">
 						<img src="../../files/图片/wzc.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
 						<h3>王占川</h3>
-						<h4>学号：</h4>
+						<h4>学号：<?=$msgList[0]['student_id']?></h4>
 						<p>性别：
 						<br/>年级：
 						<br/>队伍：</p>
