@@ -48,7 +48,7 @@ AppAsset::register($this);
 						<span class="icon-bar"></span>
 					</button>
 					<a class="navbar-brand" href="#">
-						<img src="assets/img/logo.png" />
+						<img src="../../files/图片/team.jpg" />
 					</a>
 				</div>
 				<span class="logout-spn" >
@@ -69,19 +69,19 @@ AppAsset::register($this);
 						<a href="index.php?r=tt/createt" ><i class="fa fa-edit "></i>创建队伍</a>
 					</li>
 					<li>
-						<a href="index.php?r=tt/updateu&id=1" ><i class="fa fa-table  "></i>学生信息1</a>
+						<a href="index.php?r=tt/updateu&id=1511172" ><i class="fa fa-table  "></i>学生信息1</a>
 					</li>
 					<li>
-						<a href="index.php?r=tt/updateu&id=2"><i class="fa fa-table "></i>学生信息2</a>
+						<a href="index.php?r=tt/updateu&id=1511212"><i class="fa fa-table "></i>学生信息2</a>
 					</li>
 					<li>
-						<a href="index.php?r=tt/updateu&id=3"><i class="fa fa-table "></i>学生信息3</a>
+						<a href="index.php?r=tt/updateu&id=1511214"><i class="fa fa-table "></i>学生信息3</a>
 					</li>
 					<li>
-						<a href="index.php?r=tt/updateu&id=4"><i class="fa fa-table "></i>学生信息4</a>
+						<a href="index.php?r=tt/updateu&id=1511216"><i class="fa fa-table "></i>学生信息4</a>
 					</li>
 					<li>
-						<a href="index.php?r=tt/updatet&id=1"><i class="fa fa-table "></i>团队信息</a>
+						<a href="index.php?r=tt/updatet&id=666"><i class="fa fa-table "></i>团队信息</a>
 					</li>
 
 				</ul>

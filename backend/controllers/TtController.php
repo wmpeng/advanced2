@@ -77,6 +77,16 @@ class TtController extends Controller
 			'modelit' => $this->findModelit($id),
 			]);
 	}
+	public function actionViewu($ids, $idg, $idm, $idb)
+	{
+		return $this->render('viewu', [
+			'models' => $this->findModelt($ids),
+			'modelis' => $this->findModelit($ids),
+			'modelg' => $this->findModelg($idg),
+			'modelb' => $this->findModelb($idb),
+			'modelm' => $this->findModelm($idm),
+			]);
+	}
 
 	/**
 	 * Creates a new ShowGame model.
@@ -123,7 +133,13 @@ class TtController extends Controller
 			$modellb->save();
 			$modelit->save();
 
-			return $this->redirect(['viewu', 'id' => $modelis->stuId]);
+			return $this->redirect([
+				'viewu', 
+				'ids' => $modelis->stuId, 
+				'idg'=> $modelg->gameId, 
+				'idm'=> $modelm->movieId, 
+				'idb'=> $modelb->bookId,
+				]);
 		}
 		else 
 		{
@@ -312,6 +328,14 @@ class TtController extends Controller
 	protected function findModelm($id)
 	{
 		if (($model = ShowMovie::findOne($id)) !== null) {
+			return $model;
+		} else {
+			throw new NotFoundHttpException('The requested page does not exist.');
+		}
+	}
+	protected function findModelb($id)
+	{
+		if (($model = ShowBook::findOne($id)) !== null) {
 			return $model;
 		} else {
 			throw new NotFoundHttpException('The requested page does not exist.');

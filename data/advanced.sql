@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2017-07-13 10:53:46
+-- Generation Time: 2017-07-13 17:46:17
 -- 服务器版本： 10.1.21-MariaDB
 -- PHP Version: 5.6.30
 
@@ -19,6 +19,19 @@ SET time_zone = "+00:00";
 --
 -- Database: `advanced`
 --
+
+drop table msg_message;
+drop table cont_contact;
+drop table show_team;
+drop table show_student;
+drop table show_likeb;
+drop table show_likeg;
+drop table show_likem;
+drop table show_book;
+drop table show_game;
+drop table show_movie;
+drop table info_student;
+drop table info_team;
 
 -- --------------------------------------------------------
 
@@ -49,6 +62,16 @@ CREATE TABLE `info_student` (
   `teamId` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+--
+-- 转存表中的数据 `info_student`
+--
+
+INSERT INTO `info_student` (`stuId`, `stuName`, `stuGender`, `stuGrade`, `teamId`) VALUES
+(1511172, '顾飞', '男', '大二', 666),
+(1511212, '王明鹏', '男', '大二', 666),
+(1511214, '王文豪', '男', '大二', 666),
+(1511216, '王占川', '男', '大二', 666);
+
 -- --------------------------------------------------------
 
 --
@@ -61,16 +84,12 @@ CREATE TABLE `info_team` (
   `memberNum` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
--- --------------------------------------------------------
-
 --
--- 表的结构 `migration`
+-- 转存表中的数据 `info_team`
 --
 
-CREATE TABLE `migration` (
-  `version` varchar(180) COLLATE utf8_bin NOT NULL,
-  `apply_time` int(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+INSERT INTO `info_team` (`teamId`, `teamName`, `memberNum`) VALUES
+(666, 'WWWG队', 4);
 
 -- --------------------------------------------------------
 
@@ -97,6 +116,16 @@ CREATE TABLE `show_book` (
   `bookAuthor` tinytext COLLATE utf8_bin
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+--
+-- 转存表中的数据 `show_book`
+--
+
+INSERT INTO `show_book` (`bookId`, `bookName`, `bookAuthor`) VALUES
+(1, '海边的卡夫卡', '村上春树'),
+(2, '生命是什么', '埃尔温·薛定谔'),
+(3, 'XX', 'XX'),
+(4, 'XX', 'XX');
+
 -- --------------------------------------------------------
 
 --
@@ -109,6 +138,16 @@ CREATE TABLE `show_game` (
   `gameType` tinytext COLLATE utf8_bin
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+--
+-- 转存表中的数据 `show_game`
+--
+
+INSERT INTO `show_game` (`gameId`, `gameName`, `gameType`) VALUES
+(1, '钢铁雄心', '策略'),
+(2, '求生之路', '恐怖生存'),
+(3, 'XX', 'XX'),
+(4, 'XX', 'XX');
+
 -- --------------------------------------------------------
 
 --
@@ -119,6 +158,16 @@ CREATE TABLE `show_likeb` (
   `stuId` int(11) NOT NULL,
   `bookId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- 转存表中的数据 `show_likeb`
+--
+
+INSERT INTO `show_likeb` (`stuId`, `bookId`) VALUES
+(1511172, 1),
+(1511212, 2),
+(1511214, 4),
+(1511216, 3);
 
 -- --------------------------------------------------------
 
@@ -131,6 +180,16 @@ CREATE TABLE `show_likeg` (
   `gameId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+--
+-- 转存表中的数据 `show_likeg`
+--
+
+INSERT INTO `show_likeg` (`stuId`, `gameId`) VALUES
+(1511172, 1),
+(1511212, 2),
+(1511214, 4),
+(1511216, 3);
+
 -- --------------------------------------------------------
 
 --
@@ -141,6 +200,16 @@ CREATE TABLE `show_likem` (
   `stuId` int(11) NOT NULL,
   `movieId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- 转存表中的数据 `show_likem`
+--
+
+INSERT INTO `show_likem` (`stuId`, `movieId`) VALUES
+(1511172, 1),
+(1511212, 2),
+(1511214, 4),
+(1511216, 3);
 
 -- --------------------------------------------------------
 
@@ -155,6 +224,16 @@ CREATE TABLE `show_movie` (
   `movieType` tinytext COLLATE utf8_bin
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
+--
+-- 转存表中的数据 `show_movie`
+--
+
+INSERT INTO `show_movie` (`movieId`, `movieName`, `movieDirector`, `movieType`) VALUES
+(1, '七宗罪', '大卫·芬奇', '剧情'),
+(2, '谍影重重', '道格·里曼', '动作'),
+(3, 'XX', 'XX', 'XX'),
+(4, 'XX', 'XX', 'XX');
+
 -- --------------------------------------------------------
 
 --
@@ -166,6 +245,16 @@ CREATE TABLE `show_student` (
   `picture` text COLLATE utf8_bin,
   `motto` text COLLATE utf8_bin
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- 转存表中的数据 `show_student`
+--
+
+INSERT INTO `show_student` (`stuId`, `picture`, `motto`) VALUES
+(1511172, './../files/图片/gf.jpg', 'XXX'),
+(1511212, './../files/图片/wmp.jpg', 'XXX'),
+(1511214, './../files/图片/wwh.jpg', 'XXX'),
+(1511216, './../files/图片/wzc.jpg', 'XXX');
 
 -- --------------------------------------------------------
 
@@ -179,25 +268,12 @@ CREATE TABLE `show_team` (
   `slogan` text COLLATE utf8_bin
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 
--- --------------------------------------------------------
-
---
--- 表的结构 `user`
+-- 转存表中的数据 `show_team`
 --
 
-CREATE TABLE `user` (
-  `id` int(11) NOT NULL,
-  `username` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `auth_key` varchar(32) COLLATE utf8_unicode_ci NOT NULL,
-  `password_hash` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `password_reset_token` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `email` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
-  `status` smallint(6) NOT NULL DEFAULT '10',
-  `created_at` int(11) NOT NULL,
-  `updated_at` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+INSERT INTO `show_team` (`teamId`, `picture`, `slogan`) VALUES
+(666, '../../files/图片/team.jpg', '我们的口号就是666');
 
---
 -- Indexes for dumped tables
 --
 
@@ -219,12 +295,6 @@ ALTER TABLE `info_student`
 --
 ALTER TABLE `info_team`
   ADD PRIMARY KEY (`teamId`);
-
---
--- Indexes for table `migration`
---
-ALTER TABLE `migration`
-  ADD PRIMARY KEY (`version`);
 
 --
 -- Indexes for table `msg_message`
@@ -284,15 +354,6 @@ ALTER TABLE `show_team`
   ADD PRIMARY KEY (`teamId`);
 
 --
--- Indexes for table `user`
---
-ALTER TABLE `user`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `username` (`username`),
-  ADD UNIQUE KEY `email` (`email`),
-  ADD UNIQUE KEY `password_reset_token` (`password_reset_token`);
-
---
 -- 在导出的表使用AUTO_INCREMENT
 --
 
@@ -305,12 +366,12 @@ ALTER TABLE `cont_contact`
 -- 使用表AUTO_INCREMENT `info_student`
 --
 ALTER TABLE `info_student`
-  MODIFY `stuId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `stuId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
 --
 -- 使用表AUTO_INCREMENT `info_team`
 --
 ALTER TABLE `info_team`
-  MODIFY `teamId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `teamId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
 --
 -- 使用表AUTO_INCREMENT `msg_message`
 --
@@ -320,22 +381,17 @@ ALTER TABLE `msg_message`
 -- 使用表AUTO_INCREMENT `show_book`
 --
 ALTER TABLE `show_book`
-  MODIFY `bookId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `bookId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
 --
 -- 使用表AUTO_INCREMENT `show_game`
 --
 ALTER TABLE `show_game`
-  MODIFY `gameId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `gameId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
 --
 -- 使用表AUTO_INCREMENT `show_movie`
 --
 ALTER TABLE `show_movie`
-  MODIFY `movieId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
---
--- 使用表AUTO_INCREMENT `user`
---
-ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `movieId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=0;
 --
 -- 限制导出的表
 --

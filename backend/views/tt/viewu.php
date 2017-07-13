@@ -36,4 +36,27 @@ $this->params['breadcrumbs'][] = $this->title;
 		'attributes' => ['picture:ntext','motto:ntext',],
 		]) 
 	?>
+	<?= DetailView::widget([
+        'model' => $model,
+        'attributes' => [
+            'movieName:ntext',
+            'movieDirector:ntext',
+            'movieType:ntext',
+        ],
+    ]) ?>
+    <?= DetailView::widget([
+        'model' => $model,
+        'attributes' => [
+            'gameName:ntext',
+            'gameType:ntext',
+        ],
+    ]) ?>
+    <?= DetailView::widget([
+        'model' => $model,
+        'attributes' => [
+            'bookId',
+            'bookName:ntext',
+            'bookAuthor:ntext',
+        ],
+    ]) ?>
 </div>
