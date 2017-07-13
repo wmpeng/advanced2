@@ -6,8 +6,8 @@ use Yii;
 use app\models\ShowMovie;
 use app\models\ShowMovieSearch;
 
-use app\models\ShowGame;
-use app\models\ShowGameSearch;
+// use app\models\ShowGame;
+// use app\models\ShowGameSearch;
 
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -36,20 +36,20 @@ class ShowMovieController extends Controller
      */
     public function actionIndex()
     {
-        /*$searchModel = new ShowMovieSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
-        return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);*/
-        $searchModel = new ShowGameSearch();
+        $searchModel = new ShowMovieSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
+/*        $searchModel = new ShowGameSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('index', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);*/
     }
 
     /**

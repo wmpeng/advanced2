@@ -16,6 +16,7 @@ class SiteController extends Controller
      * @inheritdoc
      */
     public $layout = "main_layout";
+    //public $layout = "main";
     public function behaviors()
     {
         return [
@@ -36,7 +37,7 @@ class SiteController extends Controller
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'logout' => ['post'],
+                    'logout' => ['post','get'],
                 ],
             ],
         ];

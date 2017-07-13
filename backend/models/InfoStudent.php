@@ -39,8 +39,8 @@ class InfoStudent extends \yii\db\ActiveRecord
     {
         return [
             [['stuName'], 'required'],
-            [['stuName'], 'string'],
-            [['stuGender', 'stuGrade', 'teamId'], 'integer']
+            [['stuGender', 'stuGrade','stuName'], 'string'],
+            [['teamId'], 'integer']
         ];
     }
 

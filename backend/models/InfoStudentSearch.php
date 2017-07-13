@@ -18,8 +18,8 @@ class InfoStudentSearch extends InfoStudent
     public function rules()
     {
         return [
-            [['stuId', 'stuGender', 'stuGrade', 'teamId'], 'integer'],
-            [['stuName'], 'safe'],
+            [['stuId', 'teamId'], 'integer'],
+            [['stuName', 'stuGender', 'stuGrade'], 'safe'],
         ];
     }
 

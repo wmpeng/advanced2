@@ -49,52 +49,39 @@ AppAsset::register($this);
 					</button>
 					<a class="navbar-brand" href="#">
 						<img src="assets/img/logo.png" />
-
 					</a>
-
 				</div>
-
 				<span class="logout-spn" >
-					<a href="#" style="color:#fff;">LOGOUT</a>  
-
+					<a href="/advanced2/backend/web/index.php?r=site%2Flogout" data-method="post">Logout</a> 
+					<!-- <a href="index.php?r=site/logout" style="color:#fff;">LOGOUT</a>   -->
 				</span>
 			</div>
 		</div>
+
 		<!-- /. NAV TOP  -->
 		<nav class="navbar-default navbar-side" role="navigation">
 			<div class="sidebar-collapse">
 				<ul class="nav" id="main-menu">
-
-
-
-					<li class="active-link">
-						<a href="index.html" ><i class="fa fa-desktop "></i>信息修改 <span class="badge">Included</span></a>
-					</li>
-
-
 					<li>
-						<a href="ui.html"><i class="fa fa-table "></i>留言板  <span class="badge">Included</span></a>
+						<a href="index.php?r=tt/createu" ><i class="fa fa-edit "></i>创建学生</a>
 					</li>
 					<li>
-						<a href="blank.html"><i class="fa fa-edit "></i>Blank Page  <span class="badge">Included</span></a>
-					</li>
-
-
-					<li>
-						<a href="#"><i class="fa fa-qrcode "></i>My Link One</a>
+						<a href="index.php?r=tt/createt" ><i class="fa fa-edit "></i>创建队伍</a>
 					</li>
 					<li>
-						<a href="#"><i class="fa fa-bar-chart-o"></i>My Link Two</a>
-					</li>
-
-					<li>
-						<a href="#"><i class="fa fa-edit "></i>My Link Three </a>
+						<a href="index.php?r=tt/updateu&id=1" ><i class="fa fa-table  "></i>学生信息1</a>
 					</li>
 					<li>
-						<a href="#"><i class="fa fa-table "></i>My Link Four</a>
+						<a href="index.php?r=tt/updateu&id=2"><i class="fa fa-table "></i>学生信息2</a>
 					</li>
 					<li>
-						<a href="#"><i class="fa fa-edit "></i>My Link Five </a>
+						<a href="index.php?r=tt/updateu&id=3"><i class="fa fa-table "></i>学生信息3</a>
+					</li>
+					<li>
+						<a href="index.php?r=tt/updateu&id=4"><i class="fa fa-table "></i>学生信息4</a>
+					</li>
+					<li>
+						<a href="index.php?r=tt/updatet&id=1"><i class="fa fa-table "></i>团队信息</a>
 					</li>
 
 				</ul>

@@ -10,7 +10,13 @@ use yii\widgets\ActiveForm;
 
 <div class="show-game-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <?php $form = ActiveForm::begin(); 
+    $modelm=new ShowMovie();
+    ?>
+
+    <?= $form->field($model, 'gameName')->textarea(['rows' => 6]) ?>
+
+    <?= $form->field($model, 'gameType')->textarea(['rows' => 6]) ?>
 
     <?= $form->field($model, 'gameName')->textarea(['rows' => 6]) ?>
 
