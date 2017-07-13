@@ -1,4 +1,13 @@
-<!DOCTYPE html>
+/**
+ *1511172 顾飞code.
+ */
+ <!DOCTYPE html>
+<?php
+
+
+use yii\helpers\Html;
+use yii\bootstrap\ActiveForm;
+?>
 <!--1511172 顾飞>   
 <!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
@@ -98,11 +107,10 @@
       <div class="row">
       <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right media"><img src="images/jhon-img.jpg" alt=""></div>
       	<div class=" col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left media">
-        	<h5>顾 飞</h5>
-            <h4>1511172</h4>
-			<h4>男</h4>
-			<h4>大二</h4>
-			<h4>队名</h4>
+        	<h5>姓名：<?=$msgList[0]['stuName']?><br></h5>
+            <h4>学号：<?=$msgList[0]['stuId']?><br></h4>
+			<h4>性别：<?=$msgList[0]['stuGender']?><br></h4>
+			<h4>年级：<?=$msgList[0]['stuGrade']?><br></h4>
 <p><a role="button" class="btn btn-primary btn-lg">Download Printable Resume</a></p>
         </div>
       	
@@ -110,7 +118,8 @@
     </div>    
   </section>
   <!--about us end--> 
-  <!--Skillset start -->
+  <!--BOOK start -->
+
   <section id="skillset" class="skillset">
   	<div class="container">
     	<div class="row">
@@ -121,18 +130,18 @@
               </div>
             </div>
             <div class="col-md-12">
-            	<div class="col-md-6 col-sm-12 media">
-                	<p>书名 作者 类别</p>
-					<p>书名 作者 类别</p>
-                </div>
+            	
+				<h4>书名：<?=$msgListB[0]['bookName']?><br></h4>
+			    <h4>作者：<?=$msgListB[0]['bookAuthor']?><br></h4>
+               
 
                 </div>
             </div>
         </div>
     </div>
   </section>
-  <!--Skillset end -->
-   <!--Skillset start -->
+  <!--BOOK end -->
+   <!--MOVIES start -->
   <section id="skillset" class="skillset">
   	<div class="container">
     	<div class="row">
@@ -143,39 +152,38 @@
               </div>
             </div>
             <div class="col-md-12">
-            	<div class="col-md-6 col-sm-12 media">
-                	<p>电影 导演 类别</p>
-					<p>电影 导演 类别</p>
-                </div>
+            	<h4>影名：<?=$msgListM[0]['movieName']?><br></h4>
+			    <h4>导演：<?=$msgListM[0]['movieDirector']?><br></h4>
+                <h4>类别：<?=$msgListM[0]['movieType']?><br></h4>
+			    
 
                 </div>
             </div>
         </div>
     </div>
   </section>
-  <!--Skillset end -->
-   <!--Skillset start -->
+  <!--MOVIES end -->
+    <!--GAME start -->
   <section id="skillset" class="skillset">
   	<div class="container">
     	<div class="row">
         	<div class="col-md-12">
                <div class="heading">
-                <h2>GAMES</h2>
-                <h3>You never know your luck--someone</h3>        
+                <h2>MOVIES</h2>
+                <h3>It is impossible to love and to be wise--Francis Bacon </h3>        
               </div>
             </div>
             <div class="col-md-12">
-            	<div class="col-md-6 col-sm-12 media">
-                	<p>游戏 类别</p>
-					<p>游戏 类别</p>
-                </div>
+                   	<h4>游戏名：<?=$msgListG[0]['gameName']?><br></h4>
+                <h4>类别：<?=$msgListG[0]['gameType']?><br></h4>
 
                 </div>
             </div>
         </div>
     </div>
   </section>
-  <!--Skillset end -->
+  <!--GAME
+  S end -->
   <!--Work Experties start -->
   
   <section id="experience" class="myexperties">

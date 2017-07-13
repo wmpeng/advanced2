@@ -38,7 +38,7 @@ $this->title = 'teamshow';
 			
 			<br/>年级：
 						<br/>队伍：</p>
-						<a href="../../files/personshow/wmp/index.html" target="_blanket"">个人主页<a>
+						<a href="index.php?r=site/wmpindex" target="_blanket"">个人主页<a>
 						<ul class="fh5co-social">
 							<li><a href="#"><i class="icon-google"></i></a></li>
 							<li><a href="#"><i class="icon-dribbble"></i></a></li>
@@ -54,7 +54,7 @@ $this->title = 'teamshow';
 						<p>性别：
 						<br/>年级：
 						<br/>队伍：</p>
-						<a href="../../files/personshow/wwh/index.html" target="_blanket">个人主页<a>
+						<a href="index.php?r=site/wwhindex" target="_blanket">个人主页<a>
 						<ul class="fh5co-social">
 							<li><a href="#"><i class="icon-google"></i></a></li>
 							<li><a href="#"><i class="icon-dribbble"></i></a></li>
@@ -70,7 +70,7 @@ $this->title = 'teamshow';
 						<p>性别：
 						<br/>年级：
 						<br/>队伍：</p>
-						<a href="../../files/personshow/wzc/index.html" target="_blanket"">个人主页<a>
+						<a href="index.php?r=site/wzcindex" target="_blanket"">个人主页<a>
 						<ul class="fh5co-social">
 							<li><a href="#"><i class="icon-google"></i></a></li>
 							<li><a href="#"><i class="icon-dribbble"></i></a></li>
@@ -86,7 +86,7 @@ $this->title = 'teamshow';
 						<p>性别：
 						<br/>年级：
 						<br/>队伍：</p>
-						<a href="../../files/personshow/gf/index.html" target="_blanket"">个人主页<a>
+						<a href="index.php?r=site/gfindex" target="_blanket"">个人主页<a>
 						<ul class="fh5co-social">
 							<li><a href="#"><i class="icon-google"></i></a></li>
 							<li><a href="#"><i class="icon-twitter"></i></a></li>

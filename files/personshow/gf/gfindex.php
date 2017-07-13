@@ -1,4 +1,10 @@
 <!DOCTYPE html>
+<?php
+
+
+use yii\helpers\Html;
+use yii\bootstrap\ActiveForm;
+?>
 <!--1511172 顾飞>   
 <!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
@@ -98,11 +104,10 @@
       <div class="row">
       <div class=" col-lg-4 col-md-4 col-sm-4 col-xs-12 pull-right media"><img src="images/jhon-img.jpg" alt=""></div>
       	<div class=" col-lg-7 col-md-7 col-sm-7 col-xs-12 pull-left media">
-        	<h5>顾 飞</h5>
-            <h4>1511172</h4>
-			<h4>男</h4>
-			<h4>大二</h4>
-			<h4>队名</h4>
+        	<h5>姓名：<?=$msgList[0]['stuName']?><br></h5>
+            <h4>学号：<br></h4>
+			<h4>性别：<br></h4>
+			<h4>年级：<br></h4>
 <p><a role="button" class="btn btn-primary btn-lg">Download Printable Resume</a></p>
         </div>
       	
@@ -110,7 +115,20 @@
     </div>    
   </section>
   <!--about us end--> 
-  <!--Skillset start -->
+  <!--BOOK start -->
+   <?php
+        $con = mysql_connect("localhost","root","");
+        if (!$con)
+          {
+            die('Could not connect: ' . mysql_error());
+          }
+        mysql_query("set character set 'utf8'", $con);//读库 
+        mysql_query("set names 'utf8'", $con);//写库 
+        mysql_select_db("advanced", $con);
+        $result=mysql_query("select * from show_book where bookId=(select bookId from show_likeb where stuId ='1511172')");
+        mysql_close($con);
+        $row = mysql_fetch_array($result)
+      ?>
   <section id="skillset" class="skillset">
   	<div class="container">
     	<div class="row">
@@ -122,8 +140,8 @@
             </div>
             <div class="col-md-12">
             	<div class="col-md-6 col-sm-12 media">
-                	<p>书名 作者 类别</p>
-					<p>书名 作者 类别</p>
+                	<p>书名:<?php echo $row["bookName"]; ?><br></p>
+					<p>作者:<?php echo $row["bookAuthor"]; ?><br></p>
                 </div>
 
                 </div>

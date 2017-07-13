@@ -8,6 +8,22 @@
 
 namespace frontend\controllers;
 
+use frontend\models\Gufei;
+use frontend\models\GufeiB;
+use frontend\models\GufeiG;
+use frontend\models\GufeiM;
+use frontend\models\Gufei1;
+use frontend\models\GufeiB1;
+use frontend\models\GufeiG1;
+use frontend\models\GufeiM1;
+use frontend\models\Gufei2;
+use frontend\models\GufeiB2;
+use frontend\models\GufeiG2;
+use frontend\models\GufeiM2;
+use frontend\models\Gufei3;
+use frontend\models\GufeiB3;
+use frontend\models\GufeiG3;
+use frontend\models\GufeiM3;
 use Yii;
 use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
@@ -20,6 +36,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\Message;
+
 /**
  * Site controller
  */
@@ -63,11 +80,77 @@ class SiteController extends Controller
      */
 	public function actionTeamshow()
     {
-
-
         $msgList=Message::findByReceiver();
         return $this->render('teamshow',
             ['msgList'=>$msgList]
+            );
+    }
+	public function actionGfindex()
+    {
+        /* $msgList=Gufei::findByReceiver();
+        return $this->render('gfindex',
+            ['msgList'=>$msgList]
+            ); */
+		$msgList=Gufei::findByReceiver();
+		$msgListB=GufeiB::findByReceiver();
+		$msgListM=GufeiM::findByReceiver();
+		$msgListG=GufeiG::findByReceiver();
+        return $this->render('gfindex',
+            ['msgList'=>$msgList,
+			'msgListB'=>$msgListB,
+			'msgListM'=>$msgListM,
+			'msgListG'=>$msgListG]
+            );
+    }
+	public function actionWmpindex()
+    {
+        /* $msgList=Gufei::findByReceiver();
+        return $this->render('gfindex',
+            ['msgList'=>$msgList]
+            ); */
+		$msgList=Gufei1::findByReceiver();
+		$msgListB=GufeiB1::findByReceiver();
+		$msgListM=GufeiM1::findByReceiver();
+		$msgListG=GufeiG1::findByReceiver();
+        return $this->render('wmpindex',
+            ['msgList'=>$msgList,
+			'msgListB'=>$msgListB,
+			'msgListM'=>$msgListM,
+			'msgListG'=>$msgListG]
+            );
+    }
+	public function actionWzcindex()
+    {
+        /* $msgList=Gufei::findByReceiver();
+        return $this->render('gfindex',
+            ['msgList'=>$msgList]
+            ); */
+		$msgList=Gufei2::findByReceiver();
+		$msgListB=GufeiB2::findByReceiver();
+		$msgListM=GufeiM2::findByReceiver();
+		$msgListG=GufeiG2::findByReceiver();
+        return $this->render('wzcindex',
+            ['msgList'=>$msgList,
+			'msgListB'=>$msgListB,
+			'msgListM'=>$msgListM,
+			'msgListG'=>$msgListG]
+            );
+    }
+	public function actionWwhindex()
+    {
+        /* $msgList=Gufei::findByReceiver();
+        return $this->render('gfindex',
+            ['msgList'=>$msgList]
+            ); */
+		$msgList=Gufei3::findByReceiver();
+		$msgListB=GufeiB3::findByReceiver();
+		$msgListM=GufeiM3::findByReceiver();
+		$msgListG=GufeiG3::findByReceiver();
+        return $this->render('wwhindex',
+            ['msgList'=>$msgList,
+			'msgListB'=>$msgListB,
+			'msgListM'=>$msgListM,
+			'msgListG'=>$msgListG]
             );
     }
     public function actions()
