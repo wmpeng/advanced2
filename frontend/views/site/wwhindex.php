@@ -1,10 +1,9 @@
-/**
- *1511172 顾飞code.
- */
  <!DOCTYPE html>
 <?php
 
-
+/**
+ *1511172 顾飞code.
+ */
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 ?>

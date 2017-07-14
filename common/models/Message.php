@@ -47,7 +47,7 @@ class Message extends ActiveRecord
 					stuGrade,
 					teamName')
           ->from('info_student,info_team')
-          ->where('info_team.teamId=1 and info_student.teamId=info_team.teamId')
+          ->where('info_team.teamId=666 and info_student.teamId=info_team.teamId')
           ->orderBy('stuId');
        return $qry->all();
 	}

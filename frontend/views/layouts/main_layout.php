@@ -213,11 +213,6 @@ AppAsset::register($this);
           <i class="fa fa-circle"></i>
         </li>
         <li class="dropdown menu-merge">
-          <a href="#" class="dropdown-toggle fw600 p15" data-toggle="dropdown">
-          	<img src="../web/statics/assets/img/avatars/1.jpg" alt="avatar" class="mw30 br64">
-          	<span class="hidden-xs pl15"> <?= Yii::$app->user->identity->username ?> </span>
-            <span class="caret caret-tp hidden-xs"></span>
-          </a>
           
           <ul class="dropdown-menu list-group dropdown-persist w250" role="menu">
 
@@ -269,7 +264,6 @@ AppAsset::register($this);
                 <div class="media-links">
                    <a href="#" class="sidebar-menu-toggle">用户菜单-</a> <a href="<?php echo Url::to(['site/logout']) ?>" data-method="post">登出 </a>
                 </div>
-                <div class="media-author"><?= Yii::$app->user->identity->username ?> </div>
               </div>
             </div>
           </div>
@@ -304,20 +298,16 @@ AppAsset::register($this);
         <ul class="nav sidebar-menu">
 
           <li class="sidebar-label pt15">团队展示</li>
-          <li>
-            <a class="accordion-toggle">
-              <span class="glyphicon glyphicon-fire"></span>
-              <span class="sidebar-title">团队展示</span>
-              <span class="caret"></span>
-            </a>
-            <ul class="nav sub-nav">
-              <li>
+           <li>
                 <a href="<?php echo Url::to(['site/teamshow']) ?>">
                   <span class="glyphicon glyphicon-book"></span> 团队展示</a>
               </li>
 
-            </ul>
-          </li>
+          <li class="sidebar-label pt15">留言板</li>
+          <li>
+                <a href="<?php echo Url::to(['msg-message/index']) ?>">
+                  <span class="glyphicon glyphicon-book"></span> 留言板</a>
+              </li>
 
           <li class="sidebar-label pt15">作业展示</li>
           <li>
@@ -364,7 +354,7 @@ AppAsset::register($this);
 
           
           <!-- sidebar progress bars -->
-          <li class="sidebar-label pt25 pb10">系统状态</li>
+<!--           <li class="sidebar-label pt25 pb10">系统状态</li>
           <li class="sidebar-stat">
             <a href="#projectOne" class="fs11">
               <span class="fa fa-inbox text-info"></span>
@@ -388,7 +378,7 @@ AppAsset::register($this);
                 </div>
               </div>
             </a>
-          </li>
+          </li> -->
         </ul>
         <!-- End: Sidebar Menu -->
 

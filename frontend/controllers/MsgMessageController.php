@@ -72,7 +72,8 @@ class MsgMessageController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             $model->msgTime=date("Y-m-d H:i:s");
             $model->save();
-            return $this->redirect(['view', 'id' => $model->msgId]);
+            //return $this->redirect(['view', 'id' => $model->msgId]);
+            return $this->redirect(['index']);
         } else {
             return $this->render('create', [
                 'model' => $model,
