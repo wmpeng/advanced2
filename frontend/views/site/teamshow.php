@@ -11,7 +11,7 @@ $this->title = 'teamshow';
 </head>
 <body>
 	<div class="col-md-4 fh5co-staff" >
-		<img src="../../files/图片/wmp.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
+		<img src="../../data/pic/wmp.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
 		<h3><?=$msgList[1]['stuName']?>
 			
 		</h3>
@@ -26,7 +26,7 @@ $this->title = 'teamshow';
 		</a>
 	</div>
 	<div class="col-md-4 fh5co-staff">
-		<img src="../../files/图片/wwh.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
+		<img src="../../data/pic/wwh.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
 		<h3><?=$msgList[2]['stuName']?></h3>
 		<h4>学号：<?=$msgList[2]['stuId']?></h4>
 		<p>性别：<?=$msgList[2]['stuGender']?>
@@ -37,7 +37,7 @@ $this->title = 'teamshow';
 		</a>>
 	</div>
 	<div class="col-md-4 fh5co-staff">
-		<img src="../../files/图片/wzc.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
+		<img src="../../data/pic/wzc.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
 		<h3><?=$msgList[3]['stuName']?>
 
 		</h3>
@@ -52,7 +52,7 @@ $this->title = 'teamshow';
 		</a>
 	</div>
 	<div class="col-md-4 fh5co-staff">
-		<img src="../../files/图片/gf.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
+		<img src="../../data/pic/gf.jpg" alt="Free HTML5 Bootstrap Template" class="img-responsive">
 		<h3><?=$msgList[0]['stuName']?>
 
 		</h3>

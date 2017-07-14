@@ -251,10 +251,10 @@ CREATE TABLE `show_student` (
 --
 
 INSERT INTO `show_student` (`stuId`, `picture`, `motto`) VALUES
-(1511172, './../files/图片/gf.jpg', 'XXX'),
-(1511212, './../files/图片/wmp.jpg', 'XXX'),
-(1511214, './../files/图片/wwh.jpg', 'XXX'),
-(1511216, './../files/图片/wzc.jpg', 'XXX');
+(1511172, './../data/pic/gf.jpg', 'XXX'),
+(1511212, './../data/pic/wmp.jpg', 'XXX'),
+(1511214, './../data/pic/wwh.jpg', 'XXX'),
+(1511216, './../data/pic/wzc.jpg', 'XXX');
 
 -- --------------------------------------------------------
 
@@ -272,7 +272,7 @@ CREATE TABLE `show_team` (
 --
 
 INSERT INTO `show_team` (`teamId`, `picture`, `slogan`) VALUES
-(666, '../../files/图片/team.jpg', '我们的口号就是666');
+(666, '../../data/pic/team.jpg', '我们的口号就是666');
 
 -- Indexes for dumped tables
 --

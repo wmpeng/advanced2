@@ -20,14 +20,14 @@ $this->params['breadcrumbs'][] = $this->title;
     <br/>
     <div class="row">
         <div class="col-lg-5">
-            <h4><a href="../../files/各类文档/WWWG_需求文档(1511172_1511212_1511214_1511216).pdf" target="_blanket">需求文档</a></h4>
-            <h4><a href="#">设计文档</a></h4>
-            <h4><a href="#">实现文档</a></h4>
-            <h4><a href="#">用户手册</a></h4>
-            <h4><a href="#">项目展示PPT</a></h4>
-            <h4><a href="#">源码</a></h4>
-            <h4><a href="#">数据库文件</a></h4>
-            <h4><a href="#">部署文档</a></h4>
+            <h4><a href="../../data/document/WWWG_需求文档(1511212_1511214_1511216_1511172).pdf">需求文档</a></h4>
+            <h4><a href="../../data/document/WWWG_设计文档(1511212_1511214_1511216_1511172).pdf">设计文档</a></h4>
+            <h4><a href="../../data/document/WWWG_实现文档(1511212_1511214_1511216_1511172).pdf">实现文档</a></h4>
+            <h4><a href="../../data/document/WWWG_用户手册(1511212_1511214_1511216_1511172).pdf">用户手册</a></h4>
+            <h4><a href="../../data/document/WWWG_项目展示PPT(1511212_1511214_1511216_1511172).pptx">项目展示PPT</a></h4>
+            <h4><a href="../../data/document/WWWG_实现文档(1511212_1511214_1511216_1511172).pdf">源码</a></h4>
+            <h4><a href="../../data/advanced.sql">数据库文件</a></h4>
+            <h4><a href="../../data/document/WWWG_部署文档(1511212_1511214_1511216_1511172).pdf">部署文档</a></h4>
         </div>
     </div>
 

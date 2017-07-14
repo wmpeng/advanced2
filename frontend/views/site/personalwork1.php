@@ -20,9 +20,9 @@ $this->params['breadcrumbs'][] = $this->title;
     <br/>
     <div class="row">
         <div class="col-lg-5">
-            <h4><a href="../../files/顾飞/作业1(1511172_顾飞).pdf">作业1：网页前端初探</a></h4>
-            <h4><a href="../../files/顾飞/作业2(1511172_顾飞).pdf">作业2：Web前端设计</a></h4>
-            <h4><a href="../../files/顾飞/作业3(1511172_顾飞).pdf">作业3：开源建站工具初试</a></h4>
+            <h4><a href="../../data/personal/顾飞个人作业/作业1(1511172_顾飞).pdf">作业1：网页前端初探</a></h4>
+            <h4><a href="../../data/personal/顾飞个人作业/作业2(1511172_顾飞).rar">作业2：Web前端设计</a></h4>
+            <h4><a href="../../data/personal/顾飞个人作业/作业3(1511172_顾飞).pdf">作业3：开源建站工具初试</a></h4>
         </div>
     </div>
 
